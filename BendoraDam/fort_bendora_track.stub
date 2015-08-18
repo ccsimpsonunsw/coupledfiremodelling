@@ -1,0 +1,7 @@
+C NCLFORTSTART
+    subroutine trackf90(nt,sn,we,nx,ny,nxy,ba,bb,bc,bd,np,nz2,dxy,zt1,zt2,rt,pi,ui,vi,hfi,po,zo)
+    integer nt,sn,we,nx,ny,nxy,ba,bb,bc,bd,np,nz2
+    real dxy,zt1,zt2,rt
+    real pi(we,sn,nt),ui(we,sn,nt),vi(we,sn,nt),hfi(we,sn,nt)
+    integer po(2,np,nt),zo(2,nz2,nt)
+C NCLEND

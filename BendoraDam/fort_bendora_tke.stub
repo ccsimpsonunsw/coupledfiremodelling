@@ -1,0 +1,8 @@
+C NCLFORTSTART
+    subroutine tkef90(nt,bt,sn,we,hgt,height,u,v,w,tke)
+    integer nt,bt,sn,we
+    real hgt(we,sn)
+    real height(we,sn,bt)
+    real u(we,sn,bt,nt),v(we,sn,bt,nt),w(we,sn,bt,nt)
+    real tke(we,sn)
+C NCLEND
