@@ -93,7 +93,7 @@ CONTAINS
 
    INTEGER :: icm,jcm, ii, im1, jj, jm1, loop, error, fid, nxc, nyc
    REAL    :: u_mean,v_mean, f0, p_surf, p_level, qvf, z_at_v, z_at_u
-   REAL    :: z_scale, xrad, yrad, zrad, rad, delt, cof1, cof2
+   REAL    :: z_scale, xrad, yrad, zrad, rad, delt, randx, cof1, cof2
    REAL    :: x_rad, y_rad, z_rad, hght_pert   !Ak/ak
    character (len=256) :: mminlu2              !AK/ak land use scheme (USGS)
 !   REAL, EXTERNAL :: interp_0
@@ -767,7 +767,7 @@ write(6,*) '*************************************'
       DO K = 1,4 
 !  recalc density. mass in the column not changing
 !  so when theta changes, recompute density and geopotential
-        grid%t_1(i,k,j)=grid%t_1(i,k,j)+0.1*randx*delt:
+        grid%t_1(i,k,j)=grid%t_1(i,k,j)+0.1*randx*delt
         grid%t_2(i,k,j)=grid%t_1(i,k,j)
         qvf = 1.+rvovrd*moist(i,k,j,P_QV)
         grid%alt(i,k,j) = (r_d/p1000mb)*(grid%t_1(i,k,j)+t0)*qvf* &

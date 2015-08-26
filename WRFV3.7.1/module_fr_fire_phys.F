@@ -685,6 +685,7 @@ integer:: ibeh
 real, parameter::ros_max=6.
 character(len=128)msg
 real::cor_wind,cor_slope,nvx,nvy,scale
+real,parameter :: pi=3.1415926536
 
 
 !*** executable
@@ -695,9 +696,8 @@ scale=1.
 nvx=propx/scale
 nvy=propy/scale
 
-! CCS - force Rothermel and set value of pi numerically to ok precision
+! CCS - force Rothermel for now
 ibeh = 1
-pi = 3.14159265358979
 
 ! CCS - modified, make sure speed and tanphi non-zero, calculated first
 ! fire_advection = 2 is my new option for fire spread model
